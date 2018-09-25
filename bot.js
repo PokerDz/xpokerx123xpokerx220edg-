@@ -27,5 +27,10 @@ client.user.setGame(`PoKEr DZ`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
-
+client.on('message', msg => {
+  if(msg.content === 'هلا')
+              setTimeout(function() {  
+msg.reply('هلا حبي')
+              }, 10000)
+});
 client.login(process.env.BOT_TOKEN);
